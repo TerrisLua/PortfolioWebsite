@@ -1,0 +1,95 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1em 2em;
+  background: #ffffff; /* White background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+
+.navbar .brand span {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333333; /* Dark gray text */
+}
+
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links li {
+  margin: 0 1em;
+}
+
+.navbar .nav-links a {
+  color: #333333; /* Dark gray text */
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-links a:hover {
+  color: #00bfa5; /* Teal text on hover */
+}
+
+.navbar .social-icons {
+  display: flex;
+  margin-left: 2em; /* Space between links and icons */
+}
+
+.navbar .social-icons a {
+  margin-left: 1em;
+  color: #333333; /* Dark gray icons */
+  font-size: 1.2em;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .social-icons a:hover {
+  color: #00bfa5; /* Teal icons on hover */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-links li {
+    margin: 0.5em 0;
+  }
+
+  .navbar .social-icons {
+    margin-top: 1em;
+  }
+}
