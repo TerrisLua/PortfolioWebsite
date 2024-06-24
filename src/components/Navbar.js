@@ -21,11 +21,6 @@ const Navbar = () => {
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
         </ul>
-        <div className="social-icons">
-          <a href="https://www.linkedin.com/in/terris-l-4a5842130/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-          <a href="https://github.com/TerrisLua" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-          <a href="https://github.com/your-other-github-profile" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-        </div>
       </div>
     </motion.nav>
   );

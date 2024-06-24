@@ -1,4 +1,4 @@
-/* HomePage.css */
+ /* HomePage.css */
 
 /* General styles */
 body, html {
@@ -77,6 +77,7 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   text-align: left;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .home-image {
@@ -84,11 +85,12 @@ a:hover {
 }
 
 .profile-pic {
-  width: 250px;  /* Increase size of the profile picture */
-  height: 250px;
+  width: 100%;
+  max-width: 250px;  /* Set a max size for the profile picture */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 50%;
   object-fit: cover;
-  margin-left: -20px; /* Move the profile picture slightly to the left */
+  margin: 0 auto; /* Center align the image */
 }
 
 .home-text {
@@ -108,12 +110,14 @@ a:hover {
   background: #f9f9f9; /* Light background color */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .about-text {
   flex: 1;
   padding-right: 2em;
   font-size: 1.1em; /* Adjust font size for a nicer look */
+  line-height: 1.6;
   line-height: 1.6; /* Increase line height for better readability */
   max-width: 500px; /* Set max-width to control text width */
 }
@@ -153,7 +157,6 @@ a:hover {
   color: #333333; /* Dark gray text for the list items */
   font-size: 0.7em; /* Slightly larger font for list items */
 }
-
 
 .divider {
   width: 1px;
@@ -265,6 +268,7 @@ a:hover {
 /* Projects section */
 .projects-section {
   text-align: center;
+  padding: 50px 20px; /* Add padding for smaller screens */
 }
 
 .projects-container {
@@ -329,7 +333,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;  /* Adjust padding to reduce height */
+  padding: 20px 20px;  /* Adjust padding to reduce height */
   width: 100%;
   text-align: center;
   opacity: 0.95;
@@ -371,27 +375,23 @@ a:hover {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .navbar {
+  .home-content {
     flex-direction: column;
-    align-items: flex-start;
+    text-align: center; /* Center align text for smaller screens */
   }
 
-  .navbar .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
+  .home-image {
+    margin: 0 0 20px 0; /* Remove right margin and add bottom margin */
   }
 
-  .navbar .nav-links li {
-    margin: 0.5em 0;
-  }
-
-  .navbar .social-icons {
-    margin-top: 1em;
+  .profile-pic {
+    margin-left: 0; /* Reset margin for smaller screens */
   }
 
   .about-container {
     flex-direction: column;
     text-align: center;
+    padding: 1em; /* Reduce padding for smaller screens */
   }
 
   .about-text {
@@ -401,5 +401,19 @@ a:hover {
 
   .divider {
     display: none; /* Hide divider on smaller screens */
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    max-width: 90%; /* Adjust max width for smaller screens */
+  }
+  .profile-pic {
+    width: 150px; /* Adjust width for smaller screens */
+    height: 200px; /* Adjust height for smaller screens */
+    margin-left: 0 auto; /* Reset margin for smaller screens */
   }
 }
