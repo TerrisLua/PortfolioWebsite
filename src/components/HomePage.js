@@ -1,14 +1,79 @@
 // src/components/HomePage.js
-
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from './Navbar'; // Import the Navbar component
 import Background from './Background'; // Import the Background component
 import './HomePage.css'; // Import the CSS file
 import Projects from './Projects';
+import Experience from './Experience'; // Import the Experience component
+import Education from './Education';
+import Skills from './Skills';
+
 
 
 const HomePage = () => {
+  const [activeTab, setActiveTab] = useState('aboutMe');
+  const birthYear = 1997; 
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - birthYear;
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'aboutMe':
+        return (
+          <div className="about-content">
+          <h3>About Me</h3>
+          <p>I am passionate about data, mathematics, and coding. I love solving complex problems and creating innovative solutions through technology.</p>
+          <p>My interests lie in solving complex problems and developing innovative solutions through technology.</p>
+          <p>Throughout my academic and professional journey, I've acquired a robust skill set in various programming languages and tools. I enjoy continuous learning and staying updated with the latest industry trends.</p>
+          <div className="about-details">
+            <div className="detail-item">
+              <span className="detail-title">Name</span> Terris Lua
+            </div>
+            <div className="detail-item">
+              <span className="detail-title">Experience</span> 1+ Years
+            </div>
+            <div className="detail-item">
+              <span className="detail-title">Nationality</span> Singaporean
+            </div>
+            <div className="detail-item">
+              <span className="detail-title">Email</span> luaterris880@gmail.com
+            </div>
+            <div className="detail-item">
+              <span className="detail-title">Age</span> {age}
+            </div>
+            <div className="detail-item">
+              <span className="detail-title">Languages</span> English, Chinese
+            </div>
+          </div>
+        </div>
+        );
+      case 'experience':
+        return (
+        <div className="about-content">
+          <h3>My Experience</h3>
+          <Experience />
+        </div>
+        );
+      case 'education':
+        return (
+          <div className="about-content">
+            <h3>My Education</h3>
+            <Education />
+          </div>
+          );
+      case 'skills':
+      return (
+        <div className="about-content">
+          <h3>Skills</h3>
+          <Skills />
+        </div>
+      );
+      default:
+        return null;
+    }
+  };
+
   return (
     <div>
       <Background /> {/* Include the Background component */}
@@ -33,83 +98,24 @@ const HomePage = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
             >
-              Hi, I'm Terris Lua, a Computer Science graduate from SIM-UOL.
-            </motion.p>
-            <motion.p
-              className="paragraph"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 1 }}
-            >
-              I am passionate about data, mathematics, and coding. I love solving complex problems and creating innovative solutions through technology.
-            </motion.p>
-            <motion.p
-              className="paragraph"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5, duration: 1 }}
-            >
-              My interests lie in solving complex problems and developing innovative solutions through technology.
-            </motion.p>
-            <motion.p
-              className="paragraph"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 1 }}
-            >
-              Throughout my academic and professional journey, I've acquired a robust skill set in various programming languages and tools. I enjoy continuous learning and staying updated with the latest industry trends.
+              Hello, I'm Terris Lua, a Computer Science graduate from SIM-UOL.
             </motion.p>
           </div>
         </div>
       </div>
       <div className="section light" id="about">
         <div className="about-container">
-          <div className="about-text">
-          <h3>Experience</h3>
-          <div className="experience">
-          <h4>Junior Data Engineer, Synagie</h4>
-          <p className="experience-date">May 2022 - Aug 2023</p>
-            <ul>
-              <li>Designed and implemented ETL pipelines to streamline data flow and improve data quality.</li>
-              <li>Collaborated with cross-functional teams to develop data models and warehouse solutions.</li>
-              <li>Optimized SQL queries to enhance database performance and reduce processing time.</li>
-            </ul>
+          <div className="about-sidebar">
+            <button className={`tab-button ${activeTab === 'aboutMe' ? 'active' : ''}`} onClick={() => setActiveTab('aboutMe')}>About Me</button>
+            <button className={`tab-button ${activeTab === 'experience' ? 'active' : ''}`} onClick={() => setActiveTab('experience')}>Experience</button>
+            <button className={`tab-button ${activeTab === 'education' ? 'active' : ''}`} onClick={() => setActiveTab('education')}>Education</button>
+            <button className={`tab-button ${activeTab === 'skills' ? 'active' : ''}`} onClick={() => setActiveTab('skills')}>Skills</button>
           </div>
-          </div>
-          <div className="divider"></div> {/* Add divider */}
-          <div className="about-icons">
-            <div className="category">
-              <h3>Languages</h3>
-              <div className="icons">
-                <div className="icon" data-tooltip="Python"><i className="fab fa-python"></i></div>
-                <div className="icon" data-tooltip="JavaScript"><i className="fab fa-js"></i></div>
-                <div className="icon" data-tooltip="Java"><i className="fab fa-java"></i></div>
-                <div className="icon" data-tooltip="HTML5"><i className="fab fa-html5"></i></div>
-                <div className="icon" data-tooltip="CSS3"><i className="fab fa-css3-alt"></i></div>
-                <div className="icon" data-tooltip="C#"><i className="fab fa-microsoft"></i></div> {/* Using Microsoft icon as placeholder */}
-                <div className="icon" data-tooltip="Unity"><i className="fab fa-unity"></i></div>
-              </div>
-            </div>
-            <div className="category">
-              <h3>Databases</h3>
-              <div className="icons">
-                <div className="icon" data-tooltip="SQL"><i className="fas fa-database"></i></div>
-                <div className="icon" data-tooltip="Snowflake"><i className="fas fa-snowflake"></i></div>
-                <div className="icon" data-tooltip="Alibaba Cloud"><i className="fas fa-cloud"></i></div>
-                <div className="icon" data-tooltip="PostgreSQL"><i className="fas fa-database"></i></div>
-                <div className="icon" data-tooltip="SQLite"><i className="fas fa-database"></i></div>
-              </div>
-            </div>
-            <div className="category">
-              <h3>Tools</h3>
-              <div className="icons">
-                <div className="icon" data-tooltip="GitHub"><i className="fab fa-github"></i></div>
-                <div className="icon" data-tooltip="JIRA"><i className="fab fa-jira"></i></div>
-              </div>
-            </div>
+          <div className="about-content-wrapper">
+            {renderContent()}
           </div>
         </div>
-      </div>
+      </div> 
       <div className="section dark" id="projects">
         <Projects />
       </div>

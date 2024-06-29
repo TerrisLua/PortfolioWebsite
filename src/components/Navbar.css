@@ -42,6 +42,16 @@
   margin: 0 1em;
 }
 
+.navbar .brand {
+  font-size: 1em;
+  font-weight: bold;
+  color: #396450; /* Unique color for your name */
+  font-family: 'Roboto Slab', serif; /* Ensure the font family is consistent */
+  padding: 5px 10px;
+  text-shadow: 1px 1px 2px #000; /* Add a subtle text shadow */
+  transition: transform 0.3s, background 0.3s;
+}
+
 .navbar .nav-links a {
   color: #333333; /* Dark gray text */
   text-decoration: none;
@@ -73,6 +83,7 @@
     width: 100%;
   }
 
+  
   .navbar .nav-links li {
     margin: 0.5em 1em; /* Adjust margin for smaller screens */
   }

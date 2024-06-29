@@ -1,0 +1,42 @@
+.education-section {
+    padding: 20px;
+    color: #fff; /* Set text color to white */
+  }
+  
+  .education-box {
+    background-color: #000;
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, font-size 0.3s;
+    overflow: hidden; /* Ensure content stays within the box */
+  }
+  
+  .education-box:hover {
+    transform: scale(1.05);
+    font-size: 1.1em; /* Optional: scale text slightly */
+  }
+  
+  .education-date {
+    font-size: 0.6em;
+    color: #09bb62;
+    margin-bottom: 10px;
+  }
+  
+  .education-box h4,
+  .education-box p,
+  .education-box ul li {
+    color: #fff; /* Ensure text inside boxes is white */
+  }
+  
+  .education-box ul {
+    list-style: disc inside; /* Ensure bullet points are shown */
+    padding-left: 20px; /* Adjust padding as needed */
+  }
+  
+  .education-box ul li {
+    font-size: 1em; /* Set the font size for bullet points */
+  }
+  

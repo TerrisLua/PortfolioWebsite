@@ -1,67 +1,108 @@
-/* src/components/Projects.css */
+.projects-section {
+  padding: 60px 0;
+  background-color: #000000; /* Change background color to black */
+  text-align: center;
+  color: #fff; /* Change text color to white */
+}
+
+.projects-section h2 {
+  font-size: 3em; /* Adjust font size */
+  margin-bottom: 20px;
+  color: #fff; /* Ensure heading is white */
+}
+
+.projects-section p {
+  font-size: 1em; /* Adjust font size */
+  margin-bottom: 40px;
+  color: #fff; /* Ensure text is white */
+}
 
 .projects-container {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .projects-container h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-  }
-  
-  .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: calc(25% - 20px); /* Ensure four cards per row with spacing */
+  margin: 10px; /* Adjust margin for spacing */
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-image {
+  width: 100%;
+  height: 150px; /* Adjust height for uniformity */
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+  background-color: #f0f0f0; /* Change background color of content */
+  color: #000; /* Set text color to black */
+}
+
+.project-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #000; /* Adjust text color to black */
+}
+
+.project-content p {
+  margin-bottom: 15px;
+  color: #000; /* Adjust text color to black */
+}
+
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.project-link:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1200px) {
   .project-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    margin: 20px;
-    transition: transform 0.3s;
+    width: calc(33.333% - 20px); /* Three cards per row on medium screens */
   }
-  
-  .project-card:hover {
-    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: calc(50% - 20px); /* Two cards per row on smaller screens */
   }
-  
-  .project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    width: calc(100% - 20px); /* One card per row on extra small screens */
   }
-  
-  .project-content {
-    padding: 20px;
-  }
-  
+
   .project-content h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
+    font-size: 1.2em; /* Adjust font size for small screens */
   }
-  
+
   .project-content p {
-    margin-bottom: 20px;
+    font-size: 1em; /* Adjust font size for small screens */
   }
-  
+
   .project-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #ffffff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+    padding: 8px 16px; /* Adjust padding for small screens */
+    font-size: 0.9em; /* Adjust font size for small screens */
   }
-  
-  .project-link:hover {
-    background-color: #0056b3;
-  }
-  
+}
