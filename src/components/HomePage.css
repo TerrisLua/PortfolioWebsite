@@ -1,13 +1,30 @@
  /* HomePage.css */
  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap');
 
+ @keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2, 0 0 15px #8a2be2, 0 0 20px #8a2be2, 0 0 25px #8a2be2, 0 0 30px #8a2be2, 0 0 35px #8a2be2, 0 0 40px #8a2be2;
+  }
+  50% {
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+  }
+  50% {
+    box-shadow: 0 0 15px #00bfff, 0 0 25px #00bfff, 0 0 35px #00bfff, 0 0 45px #00bfff, 0 0 55px #00bfff, 0 0 65px #00bfff, 0 0 75px #00bfff, 0 0 85px #00bfff;
+  }
+  75% {
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+  }
+  100% {
+    box-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2, 0 0 15px #8a2be2, 0 0 20px #8a2be2, 0 0 25px #8a2be2, 0 0 30px #8a2be2, 0 0 35px #8a2be2, 0 0 40px #8a2be2;
+  }
+}
 /* General styles */
 body, html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 h3 {
@@ -26,13 +43,35 @@ a:hover {
 }
 
 .heading {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem; /* Adjust size as needed */
+  color: #ffffff; /* Adjust color as needed */
+  position: absolute; /* Position it absolutely */
+  top: 20%; /* Adjust this value to position it at the top of your DP */
+  left: 35%; /* Center it horizontally */
+  transform: translateX(-50%); /* Adjust position to be centered */
 }
 
 .paragraph {
   font-size: 1.2rem;
   margin-bottom: 15px;
+}
+
+.profile-pic-container {
+  display: flex;
+  align-items: center;
+  height: 100vh; /* Ensure it takes up the full viewport height */
+  background: linear-gradient(135deg, #1f1f1f, #121212); /* Background gradient */
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #8a2be2; /* Initial border color */
+  animation: glowing 5s infinite; /* Apply the animation */
+  margin-right: 50px; /* Add margin to the right to separate from text */
 }
 
 .button {
@@ -46,8 +85,36 @@ a:hover {
   transition: background-color 0.3s;
 }
 
+.highlight {
+  color: #00ff89; /* Green color for highlight */
+}
+
 .button:hover {
   background-color: #0056b3;
+}
+
+.resume-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  color: #00ff89; /* Green text color */
+  background-color: #000; /* Black background */
+  border: 2px solid #00ff89; /* Green border */
+  border-radius: 25px; /* Rounded corners */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  margin-top: 20px; /* Add margin for spacing */
+}
+
+.resume-button:hover {
+  background-color: #00ff89; /* Green background on hover */
+  color: #000; /* Black text on hover */
+  border-color: #000; /* Black border on hover */
+}
+
+.resume-button svg {
+  margin-right: 10px; /* Space between icon and text */
 }
 
 /* Section styles */
@@ -94,17 +161,9 @@ a:hover {
   margin-right: 70px; /* Increase margin to move text to the right */
 }
 
-.profile-pic {
-  width: 100%;
-  max-width: 250px;  /* Set a max size for the profile picture */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto; /* Center align the image */
-}
-
 .home-text {
   max-width: 600px;
+  text-align: left;
 }
 
 /* Experience section */
@@ -457,25 +516,6 @@ a:hover {
   margin: 0 0 10px;
 }
 
-.project-card p {
-  margin: 0 0 20px;
-  color: #555;
-}
-
-.project-card a {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #fff;
-  background: #007bff;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.project-card a:hover {
-  background: #0056b3;
-}
-
 /* Contact section */
 .contact-section {
   display: flex;
@@ -516,8 +556,6 @@ a:hover {
   color: #0056b3;
 }
 
-
-
 .contact-name {
   margin-top: 10px;
   font-size: 1.2em;
@@ -532,17 +570,50 @@ a:hover {
   }
 
   .home-image {
-    margin: 0 0 20px 0; /* Remove right margin and add bottom margin */
+    margin-bottom: 10px; /* Add bottom margin to separate from the text */
+  }
+
+  .resume-button {
+    display: inline-block;
+    width: auto; /* Make sure the button fits the content */
+    padding: 10px 20px;
+    margin: 0 auto; /* Center the button */
+  }
+
+  .home-text {
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .home-text .heading {
+    font-size: 1.5rem; /* Adjust h1 font size for mobile */
+  }
+
+  .home-text .paragraph {
+    font-size: 1rem; /* Adjust paragraph font size for mobile */
+  }
+
+  .home-image {
+    margin-top: 10px; /* Add some margin to avoid overlapping with the navbar */
   }
 
   .profile-pic {
-    margin-left: 0; /* Reset margin for smaller screens */
+    width: 20px;
+    height: 20px;
+    margin-left: 100px; /* Reset margin for smaller screens */
+    margin-top: 100px;
   }
 
   .about-container {
     flex-direction: column;
     text-align: center;
     padding: 1em; /* Reduce padding for smaller screens */
+  }
+
+  .heading {
+    top: 20%; /* Adjust this value to position it at the top of your DP */
+    left: 20%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust position to be centered */
   }
 
   .about-text {
@@ -560,12 +631,26 @@ a:hover {
   }
 
   .project-card {
-    max-width: 90%; /* Adjust max width for smaller screens */
+    max-width: 80%; /* Adjust max width for smaller screens */
   }
   .profile-pic {
     width: 150px; /* Adjust width for smaller screens */
-    height: 200px; /* Adjust height for smaller screens */
+    height: 100px; /* Adjust height for smaller screens */
     margin-left: 0 auto; /* Reset margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-text .heading {
+    font-size: 1.2rem; /* Further adjust h1 font size for smaller screens */
+  }
+
+  .home-text .paragraph {
+    font-size: 0.9rem; /* Further adjust paragraph font size for smaller screens */
+  }
+
+  .home-image {
+    margin-top: 15px; /* Increase margin for smaller screens */
   }
 }
 

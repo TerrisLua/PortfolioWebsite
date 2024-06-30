@@ -8,7 +8,8 @@ import Projects from './Projects';
 import Experience from './Experience'; // Import the Experience component
 import Education from './Education';
 import Skills from './Skills';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 
 const HomePage = () => {
@@ -86,7 +87,7 @@ const HomePage = () => {
           <div className="home-text">
             <motion.h1
               className="heading"
-              initial={{ opacity: 0, y: -50 }}
+              initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
@@ -96,10 +97,14 @@ const HomePage = () => {
               className="paragraph"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
+              transition={{ delay: 1, duration: 1 }}
             >
-              Hello, I'm Terris Lua, a Computer Science graduate from SIM-UOL.
+              Hello, I'm <span className="highlight">Terris Lua</span>, a Computer Science graduate from SIM-UOL.
             </motion.p>
+            <br />
+              <a href="/assets/TerrisLuaResume.pdf" download className="resume-button">
+                <FontAwesomeIcon icon={faDownload} /> Download CV
+              </a>
           </div>
         </div>
       </div>

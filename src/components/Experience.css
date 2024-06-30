@@ -51,7 +51,6 @@ body {
 }
 
 .experience-box:hover {
-  transform: scale(1.05);
   font-size: 1.1em; /* Optional: scale text slightly */
 }
 
@@ -59,6 +58,20 @@ body {
   font-size: 0.6em;
   color: #00ff89;
   margin-bottom: 10px;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #000;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
 .modal {
@@ -74,8 +87,6 @@ body {
   z-index: 1000;
 }
 
-
-
 .modal-content {
   background: #1e1e1e;
   padding: 20px;
@@ -83,6 +94,20 @@ body {
   max-width: 500px;
   width: 90%;
   position: relative;
+}
+
+.more-details-btn {
+  background-color: #00ff89;
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Add margin to position the button within the box */
+}
+
+.more-details-btn:hover {
+  background-color: #00d977;
 }
 
 .close-button {
