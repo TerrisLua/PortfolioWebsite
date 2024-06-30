@@ -131,15 +131,19 @@ a:hover {
 }
 
 .section.light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   background: #ffffff; /* White background */
   color: #333333; /* Dark gray text */
   padding: 50px 20px;
-}
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 
+}
 .section.dark {
   background: #070707; /* Light black background */
   color: #ffffff; /* White text */
-  
 }
 
 .home-section {
@@ -600,8 +604,8 @@ a:hover {
   }
 
   .home-text .heading {
-    font-size: 1rem; /* Adjust h1 font size for mobile */
-    left:30%
+    font-size: 1.5rem; /* Adjust h1 font size for mobile */
+    left:18%
   }
 
   .home-text .paragraph {
@@ -613,15 +617,12 @@ a:hover {
   }
 
   .profile-pic {
-    width: 20px;
-    height: 20px;
+    width: 150px;
+    height: 150px;
     margin-left: 100px; /* Reset margin for smaller screens */
     margin-top: 100px;
   }
 
-  .about-content {
-    margin-right: 10px;
-  }
 
   .about-container {
     flex-direction: column;
@@ -636,18 +637,15 @@ a:hover {
   }
 
   .tab-button {
-    padding: 10px 10px;
+    padding: 6px 6px;
     cursor: pointer;
     font-size: 0.7em;
     font-weight: bold;
-    margin: 0 10px; /* Add horizontal margin for spacing */
+    margin: 0 8px; /* Add horizontal margin for spacing */
+    text-align: center;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   }
 
-  .about-text {
-    padding-right: 0;
-    margin-bottom: 2em;
-  }
 
   .divider {
     display: none; /* Hide divider on smaller screens */
@@ -661,26 +659,12 @@ a:hover {
   .project-card {
     max-width: 80%; /* Adjust max width for smaller screens */
   }
-  .profile-pic {
-    width: 150px; /* Adjust width for smaller screens */
-    height: 100px; /* Adjust height for smaller screens */
-    margin-left: 0 auto; /* Reset margin for smaller screens */
+
+  .detail-item {
+    margin: 0px 0px; /* Add margin between detail items */
+    font-size: 0.7em;
   }
 }
 
-@media (max-width: 480px) {
-  .home-text .heading {
-    font-size: 1.2rem; /* Further adjust h1 font size for smaller screens */
-  }
 
-  .home-text .paragraph {
-    font-size: 0.9rem; /* Further adjust paragraph font size for smaller screens */
-  }
-
-  .home-image {
-    margin-top: 15px; /* Increase margin for smaller screens */
-  }
-
-
-}
 
