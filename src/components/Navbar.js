@@ -13,7 +13,7 @@ const Navbar = () => {
       transition={{ type: 'spring', stiffness: 120 }}
     >
       <div className="brand">
-        <span>Terris</span>
+        <span>Terris .</span>
       </div>
       <div className="nav-links">
         <ul>

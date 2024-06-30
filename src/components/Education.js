@@ -5,12 +5,12 @@ const education = [
   {
     title: 'Bachelor Degree in Computer Science',
     institution: 'SIM-UOL',
-    date: 'Graduated: Nov 2023',
+    date: 'Oct 2020 - Nov 2023',
   },
   {
     title: 'Diploma in Electrical & Electronics Engineering',
     institution: 'Singapore Polytechnic',
-    date: 'Graduated: Mar 2018',
+    date: 'Mar 2015 - Mar 2018',
   },
 ];
 

@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from './Navbar'; // Import the Navbar component
-import Background from './Background'; // Import the Background component
 import './HomePage.css'; // Import the CSS file
 import Projects from './Projects';
 import Experience from './Experience'; // Import the Experience component
@@ -77,7 +76,6 @@ const HomePage = () => {
 
   return (
     <div>
-      <Background /> {/* Include the Background component */}
       <Navbar /> {/* Include the Navbar component */}
       <div className="section home-section dark" id="home">
         <div className="home-content">
