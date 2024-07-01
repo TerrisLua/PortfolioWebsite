@@ -37,20 +37,14 @@ a:hover {
   text-decoration: none; /* Remove underline on hover */
 }
 
-.heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem; /* Adjust size as needed */
-  color: #ffffff; /* Adjust color as needed */
-  position: absolute; /* Position it absolutely */
-  top: 20%; /* Adjust this value to position it at the top of your DP */
-  left: 35%; /* Center it horizontally */
-  transform: translateX(-50%); /* Adjust position to be centered */
-}
 
 .paragraph {
   font-size: 1.2rem;
-  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
 }
+
+
 
 .profile-pic-container {
   display: flex;
@@ -81,7 +75,6 @@ a:hover {
 }
 
 .highlight {
-  color: #00ff89; /* Green color for highlight */
   font-weight: bold; /* Make the font bolder */
 }
 
@@ -94,9 +87,9 @@ a:hover {
   padding: 10px 20px;
   font-size: 1rem;
   font-family: 'Lato', sans-serif;
-  color: #00ff89; /* Green text color */
+  color: #f8fcfa; /* Green text color */
   background-color: #000; /* Black background */
-  border: 2px solid #00ff89; /* Green border */
+  border: 2px solid #f5f5f5; /* Green border */
   border-radius: 25px; /* Rounded corners */
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
@@ -104,7 +97,7 @@ a:hover {
 }
 
 .resume-button:hover {
-  background-color: #00ff89; /* Green background on hover */
+  background-color: #ffffff; /* Green background on hover */
   color: #000; /* Black text on hover */
   border-color: #000; /* Black border on hover */
 }
@@ -141,6 +134,8 @@ a:hover {
 }
 
 .home-section {
+  background: url('background.jpg') no-repeat center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -235,6 +230,10 @@ a:hover {
   color: #000; /* Highlighted color for the header */
 }
 
+.about-content h4 {
+  font-size: 1.1em;
+}
+
 .about-details {
   display: flex;
   flex-wrap: wrap;
@@ -288,7 +287,7 @@ a:hover {
 
 .experience-date {
   font-size: 0.9em;
-  color: #00ff89;
+  color: #ffffff;
 }
 
 .icon {
@@ -355,13 +354,6 @@ a:hover {
 
 .experience h3 {
   color: #333333; /* Dark gray for the job title */
-}
-
-.experience-date {
-  font-size: 0.6em;
-  margin-bottom: 1em;
-  color: #666666; /* Gray color for the date */
-  opacity: 0.7; /* Lower opacity for the date */
 }
 
 .about-text ul {
@@ -553,15 +545,32 @@ a:hover {
 }
 
 .social-links a {
+  position: relative;
   margin: 0 10px;
   color: #007bff;
   font-size: 2em;
   transition: color 0.2s;
 }
 
-.social-links a:hover {
-  color: #0056b3;
+.social-links a::before {
+  content: attr(data-hover);
+  position: absolute;
+  top: -30px; /* Adjust this value to position the text correctly */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000000;
+  font-size: 0.5em; /* Smaller font size */
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  transition: opacity 0.3s, visibility 0.3s;
 }
+
+.social-links a:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 .contact-name {
   margin-top: 10px;
@@ -576,9 +585,7 @@ a:hover {
     text-align: center; /* Center align text for smaller screens */
   }
 
-  .home-image {
-    margin-bottom: 10px; /* Add bottom margin to separate from the text */
-  }
+
 
   .resume-button {
     display: inline-block;
@@ -604,17 +611,15 @@ a:hover {
 
   .home-text .paragraph {
     font-size: 1rem; /* Adjust paragraph font size for mobile */
-  }
-
-  .home-image {
-    margin-top: 10px; /* Add some margin to avoid overlapping with the navbar */
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   .profile-pic {
     width: 150px;
     height: 150px;
     margin-left: 100px; /* Reset margin for smaller screens */
-    margin-top: 100px;
+    margin-bottom: 40px;
   }
 
   .about-container {

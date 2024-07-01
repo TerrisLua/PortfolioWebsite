@@ -6,12 +6,17 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
+.experience-grid h4 {
+  font-size: 0.9em;
+}
+
 .experience-section {
-    padding: 20px;
+    padding: 15px;
     color: #fff; /* Set text color to white */
   }
 
 .experience-section p {
+  font-size: 0.7em;
   margin-bottom: 15px;
   text-align: justify;
   font-family: 'Roboto Slab', serif;
@@ -33,7 +38,7 @@ body {
 .experience-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   max-height: 400px; /* Limit the height of the experience grid */
   overflow-y: auto; /* Enable vertical scrolling */
   padding-right: 10px; /* Provide space for the scrollbar */
@@ -56,7 +61,7 @@ body {
 
 .experience-date {
   font-size: 0.6em;
-  color: #00ff89;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -97,17 +102,18 @@ body {
 }
 
 .more-details-btn {
-  background-color: #00ff89;
+  background-color: #f4f5f4;
   color: #000;
   border: none;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px; /* Add margin to position the button within the box */
 }
 
 .more-details-btn:hover {
-  background-color: #00d977;
+  background-color: #0d0e0d;
+  color: #f8f6f6;
 }
 
 .close-button {

@@ -22,7 +22,7 @@ const HomePage = () => {
       case 'aboutMe':
         return (
           <div className="about-content">
-          <h3>About Me</h3>
+          <h4>About Me</h4>
           <p>I am passionate about data, mathematics, and coding. I love solving complex problems and creating innovative solutions through technology.</p>
           <p>My interests lie in solving complex problems and developing innovative solutions through technology.</p>
           <p>Throughout my academic and professional journey, I've acquired a robust skill set in various programming languages and tools. I enjoy continuous learning and staying updated with the latest industry trends.</p>
@@ -51,21 +51,21 @@ const HomePage = () => {
       case 'experience':
         return (
         <div className="about-content">
-          <h3>My Experience</h3>
+          <h4>My Experience</h4>
           <Experience />
         </div>
         );
       case 'education':
         return (
           <div className="about-content">
-            <h3>My Education</h3>
+            <h4>My Education</h4>
             <Education />
           </div>
           );
       case 'skills':
       return (
         <div className="about-content">
-          <h3>Skills</h3>
+          <h4>Skills</h4>
           <Skills />
         </div>
       );
@@ -77,20 +77,12 @@ const HomePage = () => {
   return (
     <div>
       <Navbar /> {/* Include the Navbar component */}
-      <div className="section home-section dark" id="home">
+      <div className="section home-section " id="home">
         <div className="home-content">
           <div className="home-image">
               <img src="/assets/dp.jpg" alt="Profile" className="profile-pic" />
           </div>
           <div className="home-text">
-            <motion.h1
-              className="heading"
-              initial={{ opacity: 0, y: -200 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-            >
-              Welcome to My Portfolio
-            </motion.h1>
             <motion.p
               className="paragraph"
               initial={{ opacity: 0 }}
@@ -124,8 +116,12 @@ const HomePage = () => {
       </div>
       <div className="section light contact-section" id="contact">
         <div className="social-links">
-          <a href="https://www.linkedin.com/in/terris-l-4a5842130/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-          <a href="https://github.com/TerrisLua" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/terris-l-4a5842130/" target="_blank" rel="noopener noreferrer" data-hover="LinkedIn">
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/TerrisLua" target="_blank" rel="noopener noreferrer" data-hover="GitHub">
+            <i className="fab fa-github"></i>
+          </a>
         </div>
         <p className="contact-name">Terris Lua</p>
       </div>
