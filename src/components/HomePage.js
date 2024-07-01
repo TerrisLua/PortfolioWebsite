@@ -101,7 +101,7 @@ const HomePage = () => {
             </motion.p>
             <br />
               <a href="/assets/TerrisLuaResume.pdf" download className="resume-button">
-                <FontAwesomeIcon icon={faDownload} /> Download CV
+                <FontAwesomeIcon icon={faDownload} /> Download Resume
               </a>
           </div>
         </div>
