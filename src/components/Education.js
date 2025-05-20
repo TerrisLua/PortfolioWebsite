@@ -5,7 +5,7 @@ const education = [
   {
     title: 'Bachelor Degree in Computer Science',
     institution: 'SIM-UOL',
-    date: 'Oct 2020 - Nov 2023',
+    date: 'Oct 2020 - Jan 2024',
   },
   {
     title: 'Diploma in Electrical & Electronics Engineering',
