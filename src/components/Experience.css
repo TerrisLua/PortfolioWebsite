@@ -22,6 +22,12 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
+.education-box .education-honours {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #e69d9d;
+}
+
 .experience-box ul {
     list-style: disc inside; /* Ensure bullet points are shown */
     padding-left: 20px; /* Adjust padding as needed */

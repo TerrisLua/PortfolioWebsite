@@ -23,9 +23,9 @@ const HomePage = () => {
         return (
           <div className="about-content">
           <h4>About Me</h4>
-          <p>I am passionate about data, mathematics, and coding. I love solving complex problems and creating innovative solutions through technology.</p>
-          <p>My interests lie in solving complex problems and developing innovative solutions through technology.</p>
-          <p>Throughout my academic and professional journey, I've acquired a robust skill set in various programming languages and tools. I enjoy continuous learning and staying updated with the latest industry trends.</p>
+          <p>I'm passionate about data, mathematics, and software development. I enjoy solving complex problems and building practical, scalable solutions through technology.</p>
+          <p>With hands-on experience in data engineering and a strong academic foundation, I've developed solid skills in Python, SQL, and data pipeline tools. I’m always eager to learn and stay updated on the latest developments in the data space — from cloud platforms to workflow orchestration.</p>
+          <p>I’m currently open to opportunities where I can apply my skills to real-world challenges and continue growing as a data engineer.</p>
           <div className="about-details">
             <div className="detail-item">
               <span className="detail-title">Name</span> Terris Lua
@@ -89,7 +89,10 @@ const HomePage = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}
             >
-              Hello, I'm <span className="highlight">Terris Lua</span>, a Computer Science graduate from SIM-UOL.
+              Hello, I'm <span className="highlight">Terris Lua</span>, a Computer Science graduate from SIM-UOL with hands-on experience in data engineering.
+              <span className="subtext">
+                 I’m currently open to full-time roles in data or backend engineering.
+              </span>
             </motion.p>
             <br />
               <a href="/assets/TerrisLuaResume.pdf" download className="resume-button">

@@ -7,9 +7,11 @@ const experiences = [
     company: 'Synagie',
     date: 'May 2022 - Aug 2023',
     descriptions: [
-      'Designed and implemented ETL pipelines to streamline data flow and improve data quality.',
-      'Collaborated with cross-functional teams to develop data models and warehouse solutions.',
-      'Optimized SQL queries to enhance database performance and reduce processing time.'
+      'Built and maintained ETL pipelines to extract, transform, and load data from APIs, databases, and flat files, supporting multiple teams with 5–7 hours of fresh data weekly.',
+      'Cleaned and processed over 10,000+ survey records, significantly improving data quality and consistency.',
+      'Diagnosed and resolved data inconsistencies across multiple sources with over 99.5% accuracy for reporting and dashboards.',
+      'Collaborated with stakeholders to design automated data workflows and simplify reporting logic.',
+      'Used Alibaba Cloud Function Compute to automate Excel ingestion from OSS to database, reducing upload effort.'
     ],
     skills: ['Python', 'SQL', 'ETL', 'Data Modeling', 'SQL Optimization', 'Dbeaver', 'Snowflake', 'Alibabacloud', 'Excel', 'Sharepoint', 'Lazada RESTful API']
   },
