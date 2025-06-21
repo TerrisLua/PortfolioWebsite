@@ -1,5 +1,5 @@
-import React from 'react';
 import './Projects.css';
+import React, { useRef } from 'react';
 
 const projects = [
   {
@@ -15,10 +15,10 @@ const projects = [
     image: '/assets/elt_dota2_photo.png'
   },
   {
-    title: '2D Plane Shooting Game',
-    description: 'A fun and interactive 2D plane shooting game developed using Unity. Players can control a plane, shoot enemies, and score points.',
-    link: 'https://github.com/TerrisLua/2d-planeshooting-game',
-    image: '/assets/2dPlane.png'
+    title: 'Real-Time Event Tracking',
+    description: 'A real-time event tracking system using Kafka, Flask, and PostgreSQL to capture, process, and display user interactions such as button clicks and page views',
+    link: 'https://github.com/TerrisLua/flask-kafka-integration',
+    image: '/assets/kafka-events-realtime.png'
   },
   {
     title: 'Crypto ETL',
@@ -33,29 +33,44 @@ const projects = [
     image: '/assets/Migration.png'
   },
   {
-    title: 'Real-Time Event Tracking',
-    description: 'A real-time event tracking system using Kafka, Flask, and PostgreSQL to capture, process, and display user interactions such as button clicks and page views',
-    link: 'https://github.com/TerrisLua/flask-kafka-integration',
-    image: '/assets/kafka-events-realtime.png'
+    title: '2D Plane Shooting Game',
+    description: 'A fun and interactive 2D plane shooting game developed using Unity. Players can control a plane, shoot enemies, and score points.',
+    link: 'https://github.com/TerrisLua/2d-planeshooting-game',
+    image: '/assets/2dPlane.png'
   },
   // Add more projects as needed
 ];
 
 const Projects = () => {
+  const scrollRef = useRef();
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -400 : 400,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <div className="projects-section">
       <h2>My Work</h2>
       <p>Check out some of my projects...</p>
-      <div className="projects-container">
+      <div className="scroll-buttons">
+        <button onClick={() => scroll('left')} className="scroll-btn">←</button>
+        <button onClick={() => scroll('right')} className="scroll-btn">→</button>
+      </div>
+      <div className="projects-scroll-container" ref={scrollRef}>
         {projects.map((project, index) => (
           <div key={index} className="project-card">
             <img src={project.image} alt={project.title} className="project-image" />
             <div className="project-content">
-              <div className="project-info">
-                <h3>{project.title}</h3>
-              </div>
+              <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">View on GitHub</a>
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                View on GitHub
+              </a>
             </div>
           </div>
         ))}

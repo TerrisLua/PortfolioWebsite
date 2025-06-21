@@ -1,39 +1,59 @@
-/* Projects.css */
-
 .projects-section {
   padding: 60px 0;
-  background-color: #000000; /* Change background color to black */
+  background-color: #000;
   text-align: center;
-  color: #fff; /* Change text color to white */
+  color: #fff;
 }
 
-.projects-section h2 {
-  font-size: 3em; /* Adjust font size */
-  margin-bottom: 20px;
-  color: #fff; /* Ensure heading is white */
-}
-
+.projects-section h2,
 .projects-section p {
-  font-size: 1em; /* Adjust font size */
-  margin-bottom: 40px;
-  color: #fff; /* Ensure text is white */
+  margin: 0 0 20px;
+  color: #fff;
 }
 
-.projects-container {
+.scroll-buttons {
+  margin-bottom: 15px;
+}
+
+.scroll-btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Scroll container */
+.projects-scroll-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 20px 40px;
+  padding-left: 80px; /* Left spacing */
+  gap: 40px;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
+.projects-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Project Card */
 .project-card {
+  flex: 0 0 25%; /* Show up to 4 per row on large screens */
+  max-width: 300px;
+  min-width: 250px;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
-  width: calc(25% - 30px); /* Ensure four cards per row with spacing */
-  margin: 10px; /* Adjust margin for spacing */
-  transition: transform 0.3s;
   text-align: left;
+  transition: transform 0.3s;
 }
 
 .project-card:hover {
@@ -42,74 +62,65 @@
 
 .project-image {
   width: 100%;
-  height: 150px; /* Adjust height for uniformity */
+  height: 150px;
   object-fit: cover;
 }
 
 .project-content {
   padding: 20px;
-  background-color: #f0f0f0; /* Change background color of content */
-  color: #000; /* Set text color to black */
+  background-color: #f0f0f0;
+  color: #000; /* Ensure all inner text is black */
 }
 
 .project-content h3 {
   font-size: 1.2em;
   margin-bottom: 10px;
   text-align: center;
-  color: #000; /* Adjust text color to black */
+  color: #000;
 }
 
 .project-content p {
   font-size: 0.9em;
   margin-bottom: 15px;
-  color: #000; /* Adjust text color to black */
+  color: #000;
 }
 
 .project-link {
   display: inline-block;
   font-size: 0.8em;
   padding: 10px 13px;
-  background-color: #000; /* Black background */
-  color: #f0f0f0; /* Green text color */
-  border-radius: 25px; /* Rounded corners */
+  background-color: #000;
+  color: #fff;
+  border-radius: 25px;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .project-link:hover {
-  background-color: #f3f3f3; /* Green background on hover */
-  color: #020202; /* Black text on hover */
-  border-color: #000; /* Black border on hover */
+  background-color: #f3f3f3;
+  color: #000;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 1200px) {
+/* Responsive - Medium screens */
+@media (max-width: 1024px) {
   .project-card {
-    width: calc(33.333% - 20px); /* Three cards per row on medium screens */
+    flex: 0 0 250px;
+    max-width: 250px;
   }
 }
 
+/* Responsive - Tablets */
 @media (max-width: 768px) {
   .project-card {
-    width: calc(50% - 20px); /* Two cards per row on smaller screens */
+    flex: 0 0 220px;
+    max-width: 220px;
   }
 }
 
+/* Responsive - Mobile */
 @media (max-width: 480px) {
   .project-card {
-    width: calc(100% - 20px); /* One card per row on extra small screens */
-  }
-
-  .project-content h3 {
-    font-size: 1.2em; /* Adjust font size for small screens */
-  }
-
-  .project-content p {
-    font-size: 1em; /* Adjust font size for small screens */
-  }
-
-  .project-link {
-    padding: 8px 16px; /* Adjust padding for small screens */
-    font-size: 0.9em; /* Adjust font size for small screens */
+    flex: 0 0 90%;
+    max-width: 90%;
   }
 }

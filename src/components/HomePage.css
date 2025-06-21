@@ -592,8 +592,6 @@ a:hover {
     text-align: center; /* Center align text for smaller screens */
   }
 
-
-
   .resume-button {
     display: inline-block;
     width: auto; /* Make sure the button fits the content */
@@ -622,11 +620,16 @@ a:hover {
     margin-right: 25px;
   }
 
+  .home-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
   .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     margin-left: 100px; /* Reset margin for smaller screens */
-    margin-bottom: 40px;
+    margin-top: 40px;
   }
 
   .about-container {
