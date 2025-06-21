@@ -9,6 +9,12 @@ const projects = [
     image: '/assets/WebDev.png'
   },
   {
+    title: 'Dota 2 ELT ',
+    description: 'An ELT pipeline that automates the daily extraction, transformation, and reporting of professional Dota 2 match data using Airflow, docker, dbt, and PostgreSQL. Includes Slack alerts for task monitoring and daily summary reports via email.',
+    link: 'https://github.com/TerrisLua/airflow-dota2-pipeline-',
+    image: '/assets/elt_dota2_photo.png'
+  },
+  {
     title: '2D Plane Shooting Game',
     description: 'A fun and interactive 2D plane shooting game developed using Unity. Players can control a plane, shoot enemies, and score points.',
     link: 'https://github.com/TerrisLua/2d-planeshooting-game',
