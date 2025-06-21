@@ -30,7 +30,7 @@
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
-  width: calc(25% - 20px); /* Ensure four cards per row with spacing */
+  width: calc(25% - 30px); /* Ensure four cards per row with spacing */
   margin: 10px; /* Adjust margin for spacing */
   transition: transform 0.3s;
   text-align: left;
